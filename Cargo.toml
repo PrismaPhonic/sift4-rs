@@ -2,12 +2,12 @@
 name = "sift4"
 license = "MIT"
 description = "Sift4 is a very fast and accurate string distance algorithm."
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Peter Farr <Peter@PrismaPhonic.com>"]
 keywords = ["sift4", "string", "fuzzy", "search", "matching"]
 edition = "2018"
 repository = "https://github.com/PrismaPhonic/sift4-rs"
-documentation = "https://prismaphonic.github.io/sift4-docs/"
+documentation = "https://prismaphonic.github.io/sift4-rs/sift4/fn.sift4.html"
 
 include = [
     "**/*.rs",
