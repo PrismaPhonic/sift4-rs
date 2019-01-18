@@ -1,8 +1,8 @@
-[package]
+jpackage]
 name = "sift4"
 license = "MIT"
 description = "Sift4 is a very fast and accurate string distance algorithm."
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Peter Farr <Peter@PrismaPhonic.com>"]
 keywords = ["sift4", "string", "fuzzy", "search", "matching"]
 edition = "2018"
