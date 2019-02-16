@@ -1,21 +1,22 @@
-///! Sift4 calculates the sift4 distance between two strings (how many characters are different) using the sift4 "simple" algorithm with a default max_distance of 5.
+//! Sift4 calculates the sift4 distance between two strings (how many characters are different) using the sift4 "simple" algorithm with a default max_distance of 5.
+//! # Algorithm
+//! [Sift4](https://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance.html) -
+//! Super Fast and Accurate string distance algorithm.
+//! Unlike Sift3, Sift4 is not only more accurate but more closely reflects what you
+//! would get from getting the levenshtein distance between two strings.
 
-/// # Sift4
-/// [Sift4](https://siderite.blogspot.com/2014/11/super-fast-and-accurate-string-distance.html) -
-/// Super Fast and Accurate string distance algorithm.
-/// Unlike Sift3, Sift4 is not only more accurate but more closely reflects what you
-/// would get from getting the levenshtein distance between two strings.
+/// Simple will take in two strings and return the string distance using the sift4 algorithm. It
+/// uses a default max offset of 5.
 ///
 /// ## Examples
 /// ```
-/// use sift4::*;
+/// extern crate sift4;
 ///
 /// // Sift4 distance
-/// let distance = sift4("London", "Londo");   
+/// let distance = sift4::simple("London", "Londo");   
 /// assert_eq!(1, distance);
 /// ```
-///
-pub fn sift4(s1: &str, s2: &str) -> i32 {
+pub fn simple(s1: &str, s2: &str) -> i32 {
     return sift4_offset(s1, s2, 5);
 }
 
@@ -96,26 +97,26 @@ fn sift4_offset(s1: &str, s2: &str, max_offset: usize) -> i32 {
 
 #[cfg(test)]
 mod tests {
-    use super::sift4;
+    use super::*;
 
     #[test]
     fn basic() {
-        assert_eq!(2, sift4("London", "Lond"));
-        assert_eq!(2, sift4("Chicago", "Chiag"));
-        assert_eq!(4, sift4("Los Angeles", "Angeles"));
-        assert_eq!(2, sift4("Bangkok", "Bagrok"));
+        assert_eq!(2, simple("London", "Lond"));
+        assert_eq!(2, simple("Chicago", "Chiag"));
+        assert_eq!(4, simple("Los Angeles", "Angeles"));
+        assert_eq!(2, simple("Bangkok", "Bagrok"));
     }
 
     #[test]
     fn case() {
-        assert_eq!(1, sift4("San Francisco", "san Francisco"));
-        assert_eq!(1, sift4("New York", "new York"));
+        assert_eq!(1, simple("San Francisco", "san Francisco"));
+        assert_eq!(1, simple("New York", "new York"));
     }
 
     #[test]
     fn empty() {
-        assert_eq!(13, sift4("San Francisco", ""));
-        assert_eq!(8, sift4("", "New York"));
+        assert_eq!(13, simple("San Francisco", ""));
+        assert_eq!(8, simple("", "New York"));
     }
 
 }

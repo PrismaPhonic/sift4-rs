@@ -1,17 +1,21 @@
 [package]
 name = "sift4"
 license = "MIT"
-description = "Sift4 is a very fast and accurate string distance algorithm."
-version = "0.1.2"
+description = "This crate provides the sift4 string distance algorithm. It is very fast and returns results similar to levenshtein"
+version = "0.1.3"
 authors = ["Peter Farr <Peter@PrismaPhonic.com>"]
-keywords = ["sift4", "string", "fuzzy", "search", "matching"]
+keywords = ["sift", "string", "fuzzy", "search", "distance"]
+categories = ["algorithms", "text-processing"]
 edition = "2018"
 repository = "https://github.com/PrismaPhonic/sift4-rs"
-documentation = "https://prismaphonic.github.io/sift4-rs/sift4/fn.sift4.html"
-
+documentation = "https://docs.rs/sift4/"
 include = [
     "**/*.rs",
     "Cargo.toml"
 ]
+
+[badges]
+travis-ci = { repository = "PrismaPhonic/sift4-rs", branch = "master" }
+maintenance = { status = "actively-developed" }
 
 [dependencies]

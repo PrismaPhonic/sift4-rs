@@ -1,4 +1,8 @@
 # sift4
+[![Build Status](https://travis-ci.org/PrismaPhonic/rs-sift4.svg?branch=master)](https://travis-ci.org/PrismaPhonic/rs-sift4)
+[![crates.io](http://meritbadge.herokuapp.com/sift4)](https://crates.io/crates/sift4)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Released API docs](https://docs.rs/sift4/badge.svg)](https://docs.rs/sift4)
 
 This is a rust implementation of the sift4 string distance algorithm. Sift4 is
 very fast and unlike sift3 more closely resembles what you would get from the
@@ -16,9 +20,12 @@ sift4 = "0.1"
 ```
 
 ## Usage
-```rust
-use sift4::*; 
 
-let distance = sift4("London", "Londo");
+For now there is only the simple algorithm, which uses a max offset of 5:
+
+```rust
+extern crate sift4;
+
+let distance = sift4::simple("London", "Londo");
 assert_eq!(1, distance);
 ```
