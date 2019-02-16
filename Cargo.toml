@@ -9,6 +9,7 @@ categories = ["algorithms", "text-processing"]
 edition = "2018"
 repository = "https://github.com/PrismaPhonic/sift4-rs"
 documentation = "https://docs.rs/sift4/"
+readme = "README.md"
 include = [
     "**/*.rs",
     "Cargo.toml"
