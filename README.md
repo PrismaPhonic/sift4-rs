@@ -16,7 +16,7 @@ sift4 is available on [crates.io](https://crates.io/crates/sift4).
 
 ```toml
 [dependencies]
-sift4 = "0.1"
+sift4 = "0.1.4"
 ```
 
 ## Usage
