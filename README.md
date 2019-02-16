@@ -1,5 +1,5 @@
 # sift4
-[![Build Status](https://travis-ci.org/PrismaPhonic/rs-sift4.svg?branch=master)](https://travis-ci.org/PrismaPhonic/rs-sift4)
+[![Build Status](https://travis-ci.org/PrismaPhonic/sift4-rs.svg?branch=master)](https://travis-ci.org/PrismaPhonic/sift4-rs)
 [![crates.io](http://meritbadge.herokuapp.com/sift4)](https://crates.io/crates/sift4)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Released API docs](https://docs.rs/sift4/badge.svg)](https://docs.rs/sift4)
